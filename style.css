@@ -1,0 +1,25 @@
+body{
+    background-color:white;
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+
+.table{
+    background-color: grey;
+    border: 1px solid black;
+    margin: 0.5em;
+    width: 80%;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+.cart div {
+    flex: 1;
+}
+
+[x-cloak] { display: none !important;}
