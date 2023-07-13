@@ -1,25 +1,143 @@
 body{
-    background-color:white;
+    background-color:grey;
     color: black;
     font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
 }
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+h2 {
+    font-size: 50px;
+    color: white;
+}
+
+.cart{
+    border: 2px solid;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em;
+    
+}
+
+.message {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+    background-color: lightblue;
+    
+}
+
 .container{
-    width: 80%;
-    margin: auto;
+    background-color: lightblue;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 0.5em;
+    width: 50%;
+    padding: 20px;
+    border-collapse: collapse;
 }
 
 
-.table{
-    background-color: grey;
+.pizza{
+    border: 2px solid;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em;
+    
+}
+
+
+.pizzaTable{
+    background-color: lightblue;
     border: 1px solid black;
     margin: 0.5em;
-    width: 80%;
+    width: 100%;
     padding: 10px;
     border-collapse: collapse;
 }
 
-.cart div {
-    flex: 1;
+.tr{
+    border: 1px solid black;
+    margin: 0.5em;
+    text-align: center;
+    padding: 10px;
+    text-transform: capitalize;
 }
 
-[x-cloak] { display: none !important;}
+th, td{
+    border: 1px solid black;
+    margin: 0.5em;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+.button {
+    font-size: 20px;
+    top:50%;
+    background-color:lightblue;
+    color: white;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+  }
+
+  .logbtn {
+    background-color: lightblue;
+    border-radius: 4px;
+    border: 1px solid black;
+  }
+
+ 
+.btn {
+  background-color: #e1ecf4;
+  border-radius: 2px;
+  border: 1px solid lightblue;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: red;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+
+}
+
+.paybtn {
+    background-color: #e1ecf4;
+    border-radius: 4px;
+    border: 1px solid lightblue;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: red;
+    font-size: 20px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: lightblue;
+  color: purple;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 4px lightblue;
+}
+
+.btn:active {
+  background-color: lightblue;
+  box-shadow: none;
+  color:  purple;
+}
+
+  .input {
+    padding: 10px;
+  }
+
+[x-cloak] { display: none !important; }
