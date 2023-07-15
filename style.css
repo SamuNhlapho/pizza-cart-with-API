@@ -1,6 +1,6 @@
 body{
     background-color:grey;
-    color: black;
+    color: white;
     font-family:'Times New Roman', Times, serif;
     font-size: 20px;
 }
@@ -12,12 +12,12 @@ h1 {
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 30px;
     color: white;
 }
 
 .cart{
-    border: 2px solid;
+    border: 1px solid;
     padding: 1em;
     margin: 1em;
     border-radius: 1em;
@@ -27,117 +27,82 @@ h2 {
 .message {
     font-size: 20px;
     color: red;
-    text-align: center;
-    background-color: lightblue;
+    background-color: white;
     
 }
 
-.container{
-    background-color: lightblue;
-    border: 2px solid rgb(0, 0, 0);
-    margin: 0.5em;
-    width: 50%;
+.table{
+    color: white;
+    border: 1px solid black;
+    margin: 1em;
+    width: 95%;
     padding: 20px;
     border-collapse: collapse;
 }
 
-
 .pizza{
-    border: 2px solid;
+    border: 1px solid;
     padding: 1em;
     margin: 1em;
     border-radius: 1em;
     
 }
 
-
 .pizzaTable{
-    background-color: lightblue;
+    color: white;
     border: 1px solid black;
-    margin: 0.5em;
-    width: 100%;
+    margin: 1em;
+    width: 95%;
     padding: 10px;
     border-collapse: collapse;
 }
 
 .tr{
     border: 1px solid black;
-    margin: 0.5em;
+    margin: 1em;
     text-align: center;
     padding: 10px;
-    text-transform: capitalize;
 }
 
 th, td{
-    border: 1px solid black;
-    margin: 0.5em;
-    padding: 10px;
-    text-transform: capitalize;
+  border: 1px solid black;
+  margin: 1em;
+  padding: 10px;
 }
 
-.button {
-    font-size: 20px;
-    top:50%;
-    background-color:lightblue;
-    color: white;
-    border:none; 
-    border-radius:10px; 
-    padding:15px;
-    min-height:30px; 
-    min-width: 120px;
-  }
 
-  .logbtn {
+.logbtn {
+    border-radius: 10px;
+    border: 1px solid black;
+    color: red;
+    padding: 8px;
     background-color: lightblue;
-    border-radius: 4px;
-    border: 1px solid black;
   }
 
- 
-.btn {
-  background-color: #e1ecf4;
-  border-radius: 2px;
-  border: 1px solid lightblue;
-  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
-  box-sizing: border-box;
-  color: red;
-  cursor: pointer;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
-  padding: 8px .8em;
-  position: relative;
-  text-align: center;
-
-}
+  input {
+    padding: 8px;
+    color: black;
+    border: 1px black;
+  }
 
 .paybtn {
-    background-color: #e1ecf4;
     border-radius: 4px;
-    border: 1px solid lightblue;
-    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
-    box-sizing: border-box;
     color: red;
     font-size: 20px;
 }
 
-.btn:hover,
-.btn:focus {
-  background-color: lightblue;
-  color: purple;
+button {
+    background-color: lightblue;
+    border: none ;
 }
 
-.btn:focus {
-  box-shadow: 0 0 0 4px lightblue;
+.Button {
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: red;
+    padding: 8px;
 }
 
-.btn:active {
-  background-color: lightblue;
-  box-shadow: none;
-  color:  purple;
-}
-
-  .input {
-    padding: 10px;
-  }
 
 [x-cloak] { display: none !important; }
