@@ -7,12 +7,14 @@ document.addEventListener("alpine:init", () => {
             cartId: '',
             cartPizzas: [],
             cartTotal: 0.00,
-            showCart: false,
+            //clearCart: false,
             paymentAmount: 0.00,
             message: '',
             showChangeMessage: false,
-            
-
+            showCart: false,
+            //clearCart: 0,
+        
+        
             Login() {
                 if (this.username.length > 2) {
                     localStorage['username'] = this.username;
@@ -141,7 +143,7 @@ document.addEventListener("alpine:init", () => {
 
                             const change = this.paymentAmount - this.cartTotal;
                             if (change >0) {
-                                this.message = `Here is your change: R${change},  Enjoy!!`;
+                                this.message = `Here is your change: R${change.toFixed(2)},  Enjoy!!`;
                             } //else  {
                                // this.message = 'Payment is insufficient'
                            // }
@@ -156,11 +158,11 @@ document.addEventListener("alpine:init", () => {
                                 localStorage['cartId'] = '';
                                 this.createCart();
                                 this.showCart = '';
+                                //this.clearCart = 0;
                             }, 3000);
                         }
                     })
             },
-
 
             pizzaImage(pizza) {
                 return `small pizza.jpg`
