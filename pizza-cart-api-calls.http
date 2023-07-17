@@ -69,15 +69,15 @@ content-type: application/json
 ### Get featured pizzas
 
 
-GET http://localhost:4009/api/pizzas/featured?username=avermeulen
+GET https://pizza-api.projectcodex.net/api/pizzas/featured?username=SamuNhlapho
 
 
 ### SET featured pizzas
 
-POST http://localhost:4009/api/pizzas/featured
+POST https://pizza-api.projectcodex.net/api/pizzas/featured
 content-type: application/json
 
 {
-	"username" : "avermeulen",
-	"pizza_id" : 13
+	"username" : "SamuNhlapho",
+	"pizza_id" : 24
 }

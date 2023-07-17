@@ -13,6 +13,7 @@ document.addEventListener("alpine:init", () => {
             showChangeMessage: false,
             showCart: false,
             //clearCart: 0,
+            featuredPizza:[],
         
         
             Login() {
@@ -78,6 +79,21 @@ document.addEventListener("alpine:init", () => {
                 })
             },
 
+            postFeaturedPizza(pizzaId){
+            axios.post('https://pizza-api.projectcodex.net/api/pizzas/featured?username=SamuNhlapho', {
+                 username : 'SamuNhlapho',
+	            pizza_id : pizzaId,
+             }).then(()=> this.getFeaturedPizza())
+             },
+
+             getFeaturedPizza() {
+                return axios.get('https://pizza-api.projectcodex.net/api/pizzas/featured?username=SamuNhlapho')
+                .then(result => {
+                    console.log(result.data)
+                    this.featuredPizza = result.data.pizzas;
+                })
+             },
+
 
             showCartData() {
                 this.getCart().then(result => {
@@ -103,6 +119,7 @@ document.addEventListener("alpine:init", () => {
                         this.pizzas = result.data.pizzas
                         //code here 
                     });
+   
 
                 if (!this.cartId) {
                     this
@@ -112,6 +129,7 @@ document.addEventListener("alpine:init", () => {
                         })
                 }
 
+                this.getFeaturedPizza();
             },
             addPizzaToCart(pizzaId) {
                 // alert(pizzaId)
@@ -165,8 +183,13 @@ document.addEventListener("alpine:init", () => {
             },
 
             pizzaImage(pizza) {
-                return `small pizza.jpg`
-            }
+                return `pizza.png`
+            },
+
+            pizzaImage(featured) {
+                return `pizza.png`
+        }
+
         }
     });
 });
