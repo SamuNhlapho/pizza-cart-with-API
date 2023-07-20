@@ -1,5 +1,5 @@
 body{
-    background-color:grey;
+    background-color:#5C0064;
     color: white;
     font-family:'Times New Roman', Times, serif;
     font-size: 20px;
@@ -16,6 +16,16 @@ h2 {
     color: white;
 }
 
+.table1  {
+    color: white;
+    border: 1px solid black;
+    margin: 1em;
+    padding: 20px;
+    border-collapse: collapse;
+    width: 85%;
+
+}
+
 .cart{
     border: 1px solid;
     padding: 1em;
@@ -27,7 +37,7 @@ h2 {
 .message {
     font-size: 20px;
     color: red;
-    background-color: lightblue;
+    background-color: yellow;
     
 }
 
@@ -35,7 +45,6 @@ h2 {
     color: white;
     border: 1px solid black;
     margin: 1em;
-    width: 95%;
     padding: 20px;
     border-collapse: collapse;
 }
@@ -76,8 +85,14 @@ th, td{
     border: 1px solid black;
     color: red;
     padding: 8px;
-    background-color: lightblue;
+    background-color: yellow;
+    font-size: 15px;
   }
+
+.logbtn:hover,
+.logbtn :focus{
+    color: green;
+}
 
   input {
     padding: 8px;
@@ -91,37 +106,55 @@ th, td{
     font-size: 15px;
     padding: 5px;
     border: 1px solid black;
+    background-color: yellow;
+}
+.paybtn:hover,
+.paybtn :focus{
+    color: green;
 }
 
-button {
-    background-color: lightblue;
-    border: none ;
-}
 
 .Button {
     background-color: lightblue;
     border: 1px solid black;
     border-radius: 10px;
+    font-size: 15px;
     color: red;
     padding: 8px;
 }
 
-.featuredBar {
-    display: flex;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+.Button:hover,
+.Button :focus{
+    color: purple
+}
+
+.Button:active{
+    color: #5C0064;
 }
 
 .feature {
     border: 1px solid black;
-    width: 100%;
     margin-left: 0.5rem;
     padding: 0.5rem;
     border-radius: 10px;
+    flex: 1;
+    margin-bottom: 1rem;
+    background-color: #FFD700;
+}
+
+.featuredBar {
+    color: black;
 }
 
 
+
+@media(min-width: 860px) {
+    .featuredBar {
+        display: flex;
+        
+    }   
+
+}
 
 
 [x-cloak] { display: none !important; }

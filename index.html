@@ -16,7 +16,7 @@
 
     <div>
 
-        <div class="cart" x-cloak>
+        <div class="cart" x-cloak >
 
             <div>Username: <input type="text" x-model="username">
                 <button class="logbtn" x-on:click="Login" x-show="!cartId">Login</button>
@@ -25,15 +25,15 @@
             <div x-show="cartId">Cart code: <span x-text="cartId"></span> </div>
 
             <div id="cart">
-               
-                <div x-show="showCart">
+
+                <div x-cloak x-show="showCart" >
                     <h2>Your Cart</h2>
                     <br>
 
                     <div class="message" x-text="message">Message here</div>
                     <br>
 
-                    <table class="table">
+                    <table class="table1">
                         <tr>
                             <th><b>flavour</b></th>
                             <th><b>Pizza Size</b></th>
@@ -63,17 +63,18 @@
                         <tr>
                             <td colspan="3">Pay Now</td>
                             <td><input x-model="paymentAmount" type="text"></td>
-                            <td><button class="paybtn" x-on:click="payForCart()">Pay</button></td>
+                            <td><button class="paybtn" x-on:click="payForCart()">Pay !</button></td>
                         </tr>
                     </table>
+                    
                 </div>
             </div><br>
+          
             <div x-show=" cartTotal > 0"><button x-on:click="showCart = !showCart" id="showCartButton"> <img
-                src="view cart.jpg" alt="cart" width="120px"></button></div>
-            
+                src="shopping-cart.png" alt="cart" width="120px"></button></div>
             <!-- <div x-show=" cartTotal < 1 "><button x-on:click="!clearCart"  id="clearCartButton"> clear cart</button></div>  -->
-
         </div>
+
         <div class="pizza" x-show="username && cartId">
         <h2 class="fpizza">Featured Pizzas</h2>
         <div class="featuredBar">
@@ -117,11 +118,61 @@
                     </tr>
                 </template>
             </table>
+
+            <div class="pizza">
+                <footer class="contact">
+                    <h2>Contact details</h2>
+                    <img src="contact.png" alt="contact" width="40px"><span>011 870 1456</span>
+                    <img src="facebook.png" alt="contact" width="50px"><span>Picture Pizza Perfect</span>
+                    <img src="instagram.png" alt="contact" width="40px"><span>Picture Pizza Perfect</span>
+                </footer>
+            </div>
+            
         </div>
 
+      
 
+    </div>
 
-        <script src="//unpkg.com/alpinejs" defer></script>
+         <script src="//unpkg.com/alpinejs" defer></script>
 </body>
 
-</html>
+</html> 
+
+        <!--  <div x-data="pizzaCart">
+            <div class="userHistory">
+                <br>
+                
+    
+                user history
+    
+                <div>
+                    username: <span x-text="username"></span>
+                </div>
+                <div class="text-center">
+                    <h3>Historical Carts</h3>
+                    <div class="row">
+                    <template x-for="cart in showPreviousOrders">
+                        <div class="section-1 col-md-4 ">
+                            <span>Cart ID: </span><span x-text="cart.id"></span><br>
+                            <span>Cart code: </span><span x-text="cart.cart_code"></span><br>
+                            <span>Username: </span><span x-text="cart.username"></span>
+                            <hr>
+                            <br>                        
+                        </div>
+                    </template>
+                    </div>
+                </div> 
+    
+            </div> 
+    
+    
+        </div>
+    
+
+          
+        </div> 
+
+
+
+       
