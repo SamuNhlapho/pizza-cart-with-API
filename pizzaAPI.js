@@ -174,7 +174,7 @@ document.addEventListener("alpine:init", () => {
                     .pay(this.paymentAmount)
                     .then(result => {
                         if (result.data.status == 'failure') {
-                            this.message = result.data.message;
+                            this.message = 'Error: Please enter sufficient amount!';
                             setTimeout(() => this.message = '', 3000);
 
                         } else {
